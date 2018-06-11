@@ -111,7 +111,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(635, 125);
+            this.label1.Location = new System.Drawing.Point(21, 330);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(145, 20);
             this.label1.TabIndex = 10;
@@ -130,15 +130,15 @@
             // 
             this.listBox3.FormattingEnabled = true;
             this.listBox3.ItemHeight = 20;
-            this.listBox3.Location = new System.Drawing.Point(17, 358);
+            this.listBox3.Location = new System.Drawing.Point(572, 152);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(836, 184);
+            this.listBox3.Size = new System.Drawing.Size(295, 164);
             this.listBox3.TabIndex = 12;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 324);
+            this.label4.Location = new System.Drawing.Point(576, 117);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 20);
             this.label4.TabIndex = 13;
@@ -166,9 +166,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(572, 152);
+            this.groupBox1.Location = new System.Drawing.Point(21, 364);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(271, 192);
+            this.groupBox1.Size = new System.Drawing.Size(850, 426);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -177,7 +177,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(865, 554);
+            this.ClientSize = new System.Drawing.Size(879, 800);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);

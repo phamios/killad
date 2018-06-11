@@ -10,8 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Microsoft.Win32;
 using System.Threading;
-using CefSharp.WinForms;
-using CefSharp;
+ 
 
 namespace Boom
 {
@@ -19,12 +18,12 @@ namespace Boom
     {
         BackgroundWorker workerThread = null; 
         bool _keepRunning = false;
-        public ChromiumWebBrowser browser;
+        
 
         public Form1()
         {
             InitializeComponent();
-            InstantiateWorkerThread();
+           
         }
 
         private void InstantiateWorkerThread()
@@ -85,9 +84,9 @@ namespace Boom
 
         private void button1_Click(object sender, EventArgs e)
         {
+            InstantiateWorkerThread();
             workerThread.RunWorkerAsync();
         }
-
 
         private void WorkerThread_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -124,14 +123,9 @@ namespace Boom
                      * */
                     for (int z = 0; z < listBox1.Items.Count; z++)
                     {
-                        if (browser != null && browser.IsBrowserInitialized)
-                        {
-                            browser.Dispose();
-                        }
-                        //listBox1.SelectedIndex = z;
-                        string keyword = listBox2.Items[z].ToString();
-                        InitBrowser(keyword, listBox1.Items[i].ToString());
-                         
+                        string keyword = listBox2.Items[z].ToString(); 
+                        BrowserLoad mainLoad = new Boom.BrowserLoad();
+                        mainLoad.InitBrowser("https://www.google.com/search?q=" + keyword+ "&ie=utf-8&oe=utf-8&client=firefox-b ", listBox1.Items[i].ToString(),1000);
                     }
                      
                      
@@ -162,47 +156,6 @@ namespace Boom
         {
             workerThread.CancelAsync();
         }
-
-
-        public void InitBrowser(string url, string sock5)
-        {
-
-           
-            CefSettings cfsettings = new CefSettings();
-            cfsettings.CefCommandLineArgs.Add("proxy-server", "socks5://" + sock5);
-            cfsettings.UserAgent = "My/Custom/User-Agent-AndStuff";
-            Cef.Initialize(cfsettings);
-
-            browser = new ChromiumWebBrowser(url);
-            this.Invoke(new MethodInvoker(delegate ()
-            {
-                groupBox1.Controls.Add((Control)browser);
-                browser.Dock = DockStyle.Fill;
-            }
-            ));
-            this.Invoke(new MethodInvoker(delegate ()
-            {
-                listBox3.Items.Add(url + "" + sock5);
-            }
-            ));
-            Thread.Sleep(1000);
-            try
-            {
-                browser.Dispose();
-                Cef.Shutdown();
-            }
-            catch (Exception ex)
-            {
-                listBox3.Items.Add("Unable to reinitialize" + ex);
-
-            }
-
-
-        }
-
-        private void Window_Closed(object sender, EventArgs e)
-        {
-            Cef.Shutdown();
-        }
+ 
     }
 }
