@@ -1,0 +1,10 @@
+c:\users\admins\documents\visual studio 2015\Projects\Boom\Boom\bin\Debug\Boom.exe.config
+c:\users\admins\documents\visual studio 2015\Projects\Boom\Boom\bin\Debug\Boom.exe
+c:\users\admins\documents\visual studio 2015\Projects\Boom\Boom\bin\Debug\Boom.pdb
+c:\users\admins\documents\visual studio 2015\Projects\Boom\Boom\obj\Debug\Boom.csprojResolveAssemblyReference.cache
+c:\users\admins\documents\visual studio 2015\Projects\Boom\Boom\obj\Debug\Boom.Form1.resources
+c:\users\admins\documents\visual studio 2015\Projects\Boom\Boom\obj\Debug\Boom.Properties.Resources.resources
+c:\users\admins\documents\visual studio 2015\Projects\Boom\Boom\obj\Debug\Boom.csproj.GenerateResource.Cache
+c:\users\admins\documents\visual studio 2015\Projects\Boom\Boom\obj\Debug\Boom.exe
+c:\users\admins\documents\visual studio 2015\Projects\Boom\Boom\obj\Debug\Boom.pdb
+c:\users\admins\documents\visual studio 2015\Projects\Boom\Boom\bin\Debug\ChilkatDotNet45.dll
